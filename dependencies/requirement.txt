@@ -1,0 +1,5 @@
+opencv-python
+numpy
+tensorflow
+tensorflow-gpu
+argparse

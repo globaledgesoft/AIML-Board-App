@@ -6,9 +6,9 @@ import os
 import glob
 
 parser = argparse.ArgumentParser()
-parser.add_argument("--w", metavar="WIDTH", help="Input shape's Width is required", required=True, type=int)
-parser.add_argument("--h", metavar="HEIGHT", help="Input shape's Height is required", required=True, type=int)
-parser.add_argument("--c", metavar="CHANNEL", help="Input shape's Channel is required", required=True, type=int)
+parser.add_argument("--w", metavar="WIDTH", default=300, help="Input shape's Width is required", type=int)
+parser.add_argument("--h", metavar="HEIGHT", default=300, help="Input shape's Height is required", type=int)
+parser.add_argument("--c", metavar="CHANNEL", default=3, help="Input shape's Channel is required", type=int)
 parser.add_argument("--img_dir", metavar="Image Directory Path", help="Give image directory name, make sure that all file are having .jpg extention", required=True, type=str)
 
 args = parser.parse_args()
@@ -17,7 +17,7 @@ args = parser.parse_args()
 class RawConvert:
 	def __init__(self):
 		self.img_dir = args.img_dir
-		if(os.path.isdir(os.path.join(self.img_dir,'raw_files')) == False):
+		if(os.path.isdir(self.img_dir + '/raw_files') == False):
 			os.mkdir(os.path.join(self.img_dir, 'raw_files'))
 		self.channel = args.c
 		self.input_shape = (args.w, args.h)

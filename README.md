@@ -6,12 +6,12 @@ The Machine learning model to detect the Objects uses Single Shot Detector(SSD) 
 Why MobilenetSSD 
 
 1. Gives realtime inference frame rates 8-13 FPS on HDK835
-2. Better perfomance and accuracy comapred to other architecutres like YOLO ... Etc,
+2. Better perfomance and accuracy compared to other architecutures like YOLO ... Etc,
 
 How to train the model
 Installation of MobilenetSSD and Caffe 
 
-1. Clean the caffe source code from the below git repositry using below commands.
+1. Clean the caffe source code from the below git repository using below commands.
 
 >$ git clone https://github.com/weiliu89/caffe.git
 
@@ -19,7 +19,7 @@ Installation of MobilenetSSD and Caffe
 
 >$ git checkout ssd
 
-2. Depending on the Processor used eithe CPU or GPU install the depending packages by executing repective instrctions frm http://caffe.berkeleyvision.org/install_apt.html
+2. Depending on the Processor used either the CPU or GPU install the depending packages by executing respective instructions from http://caffe.berkeleyvision.org/install_apt.html
 
 3. Build caffe using the below instructions
 
@@ -77,12 +77,12 @@ $ ln -s $CAFFE_DIR/PATH_TO_YOUR_TEST_LMDB test_lmdb
 $ cp $CAFFE_DIR/data/VOC0712/labelmap_voc.prototxt $MOBILENETSSD_DIR/labelmap.prototxt
 ```
 
-Run gen_model.sh for generating the training & testing prototxt with given number of classes. Please make sure that number of classes while running gen_model.sh & number of classes mentioned in labelmap.prototxt should match.
+Run gen_model.sh for generating the training & testing prototxt with the given number of classes. Please make sure that the number of classes while running gen_model.sh & number of classes mentioned in labelmap.prototxt should match.
 ```
 $ ./gen_model.sh 21
 ```
 
-Now train your model using train.sh, and keep on training unless loss is in between 1.5 to 2.5.
+Now train your model using train.sh, and keep on training unless the loss is in between 1.5 to 2.5.
 ```
 $ ./train.sh
 ```
@@ -107,7 +107,7 @@ Run demo.py for checking the detection.
 How to Convert caffe into DLC?
 
 Prerequisites
- Neural Processing SDK setup. Use the isntruction in from the below link to make the setup,
+Neural Processing SDK setup. Use the instructions from the below link to make the setup,
 https://developer.qualcomm.com/software/qualcomm-neural-processing-sdk/getting-started
 
 Initialized environmental variables of Neural Processing SDK with caffe.

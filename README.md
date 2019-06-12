@@ -1,4 +1,4 @@
-## QDN AIML Board Application
+## AIML Board Application
 
 To develop a machine learning model for object detection (Pedestrians, Cars, Motorbike, Bicycle, Bus)  which is supported by Snapdragon mobile platforms with the help of Neural Processing SDK.
 
